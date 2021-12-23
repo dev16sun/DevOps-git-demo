@@ -1,0 +1,6 @@
+[Wed Dec 22 11:54:38.590945 2021] [mpm_event:notice] [pid 3404:tid 140414716189760] AH00489: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Wed Dec 22 11:54:38.591066 2021] [core:notice] [pid 3404:tid 140414716189760] AH00094: Command line: '/usr/sbin/apache2'
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.17.0.2. Set the 'ServerName' directive globally to suppress this message
+[Wed Dec 22 13:40:46.289456 2021] [core:warn] [pid 9:tid 139948949355584] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Dec 22 13:40:46.290783 2021] [mpm_event:notice] [pid 9:tid 139948949355584] AH00489: Apache/2.4.41 (Ubuntu) configured -- resuming normal operations
+[Wed Dec 22 13:40:46.290806 2021] [core:notice] [pid 9:tid 139948949355584] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
