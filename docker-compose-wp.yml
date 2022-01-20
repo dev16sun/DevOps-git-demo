@@ -1,0 +1,44 @@
+version: "3.9"
+
+services:
+  mysqldb:
+    image: mysql:5.7
+    container_name: mysqldb1
+    volumes:
+      - devops-git-demo_db_data1:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: somewordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+
+  wordpress:
+    depends_on:
+      - mysqldb1
+    image: wordpress:latest
+    container_name: wordpress
+    volumes:
+      - devops-git-demo_wordpress_data1:/var/www/html
+    ports:
+      - "8085:80"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: mysqldb
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+
+  adminer:
+    depends_on:
+      - mysqldb1
+    image: adminer:latest
+    container_name: adminer
+    ports:
+      - "88:8080"
+    restart: always
+volumes:
+  devops-git-demo_db_data1:
+    external: true
+  devops-git-demo_wordpress_data1:
+    external: true
