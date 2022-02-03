@@ -1,6 +1,5 @@
 pipeline {
     agent {labe="SLAVE-1"}
-
     stages {
         stage('Build') {
             steps {
