@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat "docker build -t dsunaria/myprojectcicd E:\JENKINS-SLAVES\SLAVE-1\workspace\My-Project-Jenkinfile"
+                bat "docker build -t dsunaria/myprojectcicd E:\\JENKINS-SLAVES\\SLAVE-1\\workspace\\My-Project-Jenkinfile"
             }
         }
         stage('Clean') {
